@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рецепт</title>
+    <link rel="stylesheet" href="../src/App.css">
+</head>
+<body>
+    <header class="header">
+        <h1><a href="/">Рецепты</a></h1>
+        <nav>
+            <a href="/">Все рецепты</a>
+            <a href="/my-recipes">Мои рецепты</a>
+            <a href="/constructor">Конструктор</a>
+            <a href="/create-recipe">Создать</a>
+            <button class="btn-logout">Выйти</button>
+        </nav>
+    </header>
+    <main>
+        <a href="/" class="back-link">← Назад</a>
+        <article class="recipe-view-page">
+            <img src="https://via.placeholder.com/800x400" alt="Recipe" class="recipe-image">
+            <h1>Название рецепта</h1>
+            <p class="recipe-description">Полное описание рецепта с деталями приготовления...</p>
+            <div class="recipe-meta">
+                <span>🔥 350 ккал</span>
+                <span>⏱ 40 мин</span>
+                <span>👤 Автор</span>
+            </div>
+            <section>
+                <h2>Ингредиенты</h2>
+                <ul class="ingredients-list">
+                    <li>Ингредиент 1 — 200 г</li>
+                    <li>Ингредиент 2 — 1 шт</li>
+                    <li>Ингредиент 3 — 2 ст.л.</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "title": "Test Recipe",
+  "description": "A test recipe",
+  "calories": 250,
+  "cook_time": 30,
+  "is_public": true,
+  "ingredients": [
+    {"ingredient_id": 1, "quantity": "200", "unit": "г"},
+    {"ingredient_id": 6, "quantity": "150", "unit": "г"}
+  ]
+}

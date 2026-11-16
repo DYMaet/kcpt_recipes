@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Все рецепты</title>
+    <link rel="stylesheet" href="../src/App.css">
+</head>
+<body>
+    <header class="header">
+        <h1><a href="/">Рецепты</a></h1>
+        <nav>
+            <a href="/">Все рецепты</a>
+            <a href="/my-recipes">Мои рецепты</a>
+            <a href="/constructor">Конструктор</a>
+            <a href="/create-recipe">Создать</a>
+            <a href="/login">Войти</a>
+            <a href="/register">Регистрация</a>
+        </nav>
+    </header>
+    <main>
+        <div class="filters">
+            <input type="text" placeholder="Поиск..." id="searchInput">
+            <select id="sortSelect">
+                <option value="created_at_desc">Новые сначала</option>
+                <option value="created_at_asc">Старые сначала</option>
+                <option value="cook_time_asc">Время: по возрастанию</option>
+                <option value="cook_time_desc">Время: по убыванию</option>
+                <option value="calories_asc">Калории: по возрастанию</option>
+                <option value="calories_desc">Калории: по убыванию</option>
+            </select>
+        </div>
+
+        <div class="recipes-grid" id="recipesGrid">
+            <!-- Recipe cards will be inserted here by JS -->
+            <article class="recipe-card">
+                <img src="https://via.placeholder.com/400x200" alt="Recipe">
+                <h3>Название рецепта</h3>
+                <p>Краткое описание рецепта...</p>
+                <div class="recipe-meta">
+                    <span>🔥 350 ккал</span>
+                    <span>⏱ 40 мин</span>
+                    <span>👤 Автор</span>
+                </div>
+            </article>
+        </div>
+
+        <div class="pagination">
+            <button id="prevBtn" disabled>←</button>
+            <span id="pageInfo">Страница 1 из 1</span>
+            <button id="nextBtn">→</button>
+        </div>
+    </main>
+</body>
+</html>

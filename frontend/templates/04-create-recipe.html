@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создать рецепт</title>
+    <link rel="stylesheet" href="../src/App.css">
+</head>
+<body>
+    <header class="header">
+        <h1><a href="/">Рецепты</a></h1>
+        <nav>
+            <a href="/">Все рецепты</a>
+            <a href="/my-recipes">Мои рецепты</a>
+            <a href="/constructor">Конструктор</a>
+            <a href="/create-recipe">Создать</a>
+            <button class="btn-logout">Выйти</button>
+        </nav>
+    </header>
+    <main>
+        <div class="create-recipe-page">
+            <h1>Создать рецепт</h1>
+            <form class="recipe-form" id="createForm">
+                <div class="form-group">
+                    <label>Название *</label>
+                    <input type="text" name="title" required>
+                    <span class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label>Описание *</label>
+                    <textarea name="description" required></textarea>
+                    <span class="error"></span>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Калории *</label>
+                        <input type="number" name="calories" required>
+                        <span class="error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Время (мин) *</label>
+                        <input type="number" name="cook_time" required>
+                        <span class="error"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>URL изображения</label>
+                    <input type="url" name="image_url">
+                </div>
+                <div class="form-group">
+                    <label>Публичный</label>
+                    <input type="checkbox" name="is_public" checked>
+                </div>
+
+                <h3>Ингредиенты</h3>
+                <div id="ingredientsContainer">
+                    <div class="ingredient-row">
+                        <select name="ingredient_id" required>
+                            <option value="">Выберите</option>
+                            <option value="1">Куриная грудка</option>
+                            <option value="2">Свинина</option>
+                        </select>
+                        <input type="text" name="quantity" placeholder="Количество">
+                        <input type="text" name="unit" placeholder="Ед.">
+                        <button type="button" class="remove-ingredient">×</button>
+                    </div>
+                </div>
+                <button type="button" id="addIngredient">+ Ингредиент</button>
+                <span class="error" id="ingredientsError"></span>
+                <button type="submit" class="btn btn-primary">Создать</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

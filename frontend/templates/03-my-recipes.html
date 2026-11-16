@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои рецепты</title>
+    <link rel="stylesheet" href="../src/App.css">
+</head>
+<body>
+    <header class="header">
+        <h1><a href="/">Рецепты</a></h1>
+        <nav>
+            <a href="/">Все рецепты</a>
+            <a href="/my-recipes">Мои рецепты</a>
+            <a href="/constructor">Конструктор</a>
+            <a href="/create-recipe">Создать</a>
+            <button class="btn-logout">Выйти</button>
+        </nav>
+    </header>
+    <main>
+        <div class="page-header">
+            <h1>Мои рецепты</h1>
+            <a href="/create-recipe" class="btn btn-primary">Создать рецепт</a>
+        </div>
+
+        <div class="recipes-grid">
+            <article class="recipe-card my-recipe-card">
+                <img src="https://via.placeholder.com/400x200" alt="Recipe">
+                <h3>Мой рецепт</h3>
+                <p>Описание моего рецепта...</p>
+                <div class="recipe-meta">
+                    <span>🔥 350 ккал</span>
+                    <span>⏱ 40 мин</span>
+                </div>
+                <div class="recipe-actions">
+                    <a href="/edit-recipe/1" class="btn">Редактировать</a>
+                    <button class="btn btn-danger">Удалить</button>
+                </div>
+            </article>
+        </div>
+
+        <div class="pagination">
+            <button disabled>←</button>
+            <span>Страница 1 из 1</span>
+            <button>→</button>
+        </div>
+    </main>
+</body>
+</html>
